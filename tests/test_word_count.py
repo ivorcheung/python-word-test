@@ -1,5 +1,5 @@
 import unittest
-from word_tool.word_count import count_words_in_sentence, count_number_of_sentences
+from word_tool.word_count import count_words_in_sentence, count_number_of_sentences,find_longest_word_length
 
 class TestWordCount(unittest.TestCase):
 
@@ -15,6 +15,8 @@ class TestWordCount(unittest.TestCase):
         self.assertEqual(count_number_of_sentences(self.first_string), 1)
         self.assertEqual(count_number_of_sentences(self.paragraph), 61)
         
+    def test_length_of_longest_word(self):
+        self.assertEqual(find_longest_word_length(self.first_string), 5)
 
 if __name__ == "__main__":
     unittest.main
