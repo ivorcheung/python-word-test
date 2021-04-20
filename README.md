@@ -18,3 +18,9 @@ This is quite vague, but the tech test is the following. Given a block of text, 
 
 
 There will be more added to the criteria but this will be a good start for now.
+
+
+
+## Assumptions
+
+The body of text will come from somewhere, not clear where - but i'll try it with both sentence or text file
