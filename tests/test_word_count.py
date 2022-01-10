@@ -1,5 +1,6 @@
 import unittest
-from word_tool.word_count import count_words_in_sentence, count_number_of_sentences,find_longest_word_length
+from word_tool.word_count import *
+
 
 class TestWordCount(unittest.TestCase):
 
@@ -8,15 +9,21 @@ class TestWordCount(unittest.TestCase):
 
     def test_word_count_in_a_sentence(self):
 
-        self.assertEqual(count_words_in_sentence(self.first_string),9)
+        self.assertEqual(count_words_in_sentence(self.first_string), 9)
         self.assertEqual(count_words_in_sentence(self.paragraph), 320)
 
     def test_number_of_sentences(self):
         self.assertEqual(count_number_of_sentences(self.first_string), 1)
         self.assertEqual(count_number_of_sentences(self.paragraph), 61)
-        
+
     def test_length_of_longest_word(self):
         self.assertEqual(find_longest_word_length(self.first_string), 5)
+
+    # def test_six_most_recurring_words(self):
+    #     self.assertEqual(find_six_most_recurring_words(self.paragraph), 'the')
+
+    def test_percentage_of_words_occuring_once(self):
+        self.assertEqual(find_percentage_of_words_occuring_once(self.paragraph), 60)
 
 if __name__ == "__main__":
     unittest.main
